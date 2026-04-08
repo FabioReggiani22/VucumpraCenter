@@ -25,13 +25,14 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             "Hermes Trasporti s.r.l": {
                 folder: "Hermes",
-                fattura: "hermes_fattura.pdf",
+                fattura: "hermes_fat.pdf",
                 ddt: null
             },
             "Ristorante Sapori di Romagna": {
                 folder: "Sapori Di Romagna",
                 fattura: "sapori_romagna_fattura.pdf",
-                ddt: "sapori_romagna_DDT.pdf"
+                ddt: "sapori_romagna_DDT.pdf",
+                fatturaVettore: "VCC_fattura.pdf"
             }
         };
 
@@ -133,6 +134,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     buttonsHTML += `
                         <a href="${folder}/${pData.ddt}" target="_blank" class="btn" style="display: inline-flex; align-items: center; gap: 0.5rem; background: var(--primary); color: white;">
                             🚚 ${ddtTesto}
+                        </a>
+                    `;
+                }
+                if (pData.fatturaVettore) {
+                    buttonsHTML += `
+                        <a href="${folder}/${pData.fatturaVettore}" target="_blank" class="btn" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #2c3e50; color: white;">
+                            🚛 Fattura Vettore
                         </a>
                     `;
                 }
