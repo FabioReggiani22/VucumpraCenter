@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 modalLogo.innerText = logoText;
 
                 // Determina Acquisti o Vendite
-                const isVendite = (name === "Naturalia s.r.l" || name === "La Fabbrica del Gusto");
+                const isVendite = (name === "Hermes Trasporti s.r.l" || name === "Ristorante Sapori di Romagna");
                 const tipologiaTesto = isVendite ? "VENDITE" : "ACQUISTI";
                 const tipologiaBg = isVendite ? "var(--secondary)" : "var(--primary)";
                 const tipologiaColor = isVendite ? "var(--text-dark)" : "white";
