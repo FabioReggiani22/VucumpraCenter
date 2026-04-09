@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 fattura: null,
                 ddt: "fabbrica_del_gusto_DDT.pdf"
             },
-            "Naturalia s.r.l": {
+            "Naturalia s.s": {
                 folder: "Naturalia",
                 fattura: null,
                 ddt: "naturalia_DDT.pdf"
@@ -28,10 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 fattura: "hermes_fat.pdf",
                 ddt: null
             },
-            "Ristorante Sapori di Romagna": {
-                folder: "Sapori Di Romagna",
-                fattura: "sapori_romagna_fattura.pdf",
-                ddt: "sapori_romagna_DDT.pdf",
+            "Ristorante Sapore di Romagna": {
+                folder: "Sapore Di Romagna",
+                fattura: "Sapore_romagna_fattura.pdf",
+                ddt: "Sapore_romagna_DDT.pdf",
                 fatturaVettore: "VCC_fattura.pdf"
             }
         };
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 modalLogo.innerText = logoText;
 
                 // Determina Acquisti o Vendite
-                const isVendite = (name === "Hermes Trasporti s.r.l" || name === "Ristorante Sapori di Romagna");
+                const isVendite = (name === "Hermes Trasporti s.r.l" || name === "Ristorante Sapore di Romagna");
                 const tipologiaTesto = isVendite ? "VENDITE" : "ACQUISTI";
                 const tipologiaBg = isVendite ? "var(--secondary)" : "var(--primary)";
                 const tipologiaColor = isVendite ? "var(--text-dark)" : "white";
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 if (pData.ddt) {
                     let ddtTesto = "Documento di Trasporto";
-                    if (name === "Naturalia s.r.l") {
+                    if (name === "Naturalia s.s") {
                         ddtTesto = "Fattura/DDT";
                     }
                     buttonsHTML += `

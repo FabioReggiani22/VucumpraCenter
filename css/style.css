@@ -527,6 +527,26 @@ footer {
     color: var(--text-light);
     font-size: 0.9rem;
 }
+/* 1. Impostiamo una grandezza fissa per il contenitore del logo */
+.partner-logo {
+    width: 60px;  /* Puoi aumentare o diminuire questo valore (es. 80px) in base a quanto vuoi grande il logo */
+    height: 60px;
+    border-radius: 50%; /* Mantieni 50% per un cerchio perfetto, oppure metti 8px per un quadrato con angoli arrotondati */
+    overflow: hidden; /* Fondamentale: taglia le parti dell'immagine che escono dal contenitore */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff; /* Sfondo bianco, utile se i loghi sono PNG trasparenti */
+    flex-shrink: 0; /* Evita che il logo si schiacci se il testo accanto è molto lungo */
+}
+
+/* 2. Diciamo all'immagine di riempire il contenitore senza deformarsi */
+.partner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 'contain' rimpicciolisce il logo per farlo stare tutto dentro senza tagliarlo. (In alternativa puoi usare 'cover') */
+    object-position: center; /* Centra l'immagine nel riquadro */
+}
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
